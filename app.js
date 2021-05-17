@@ -2,6 +2,10 @@ var express = require('express');
 var app = express();
 const path = require('path');
 
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html')); //__dirname : Ritorna la cartella del progetto
 });
@@ -14,6 +18,12 @@ app.get('/sitemap', function (req, res) {
     res.sendFile(path.join(__dirname, 'sitemap.html')); //__dirname : Ritorna la cartella del progetto
 });
 
+app.get('/nav.html', function (req, res) {
+    res.sendFile(path.join(__dirname, 'nav.html')); //__dirname : Ritorna la cartella del progetto
+});
+
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
 });
+
+
