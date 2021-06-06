@@ -9,11 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            padding-top: 65px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -23,7 +19,28 @@
             $("#nav-placeholder").load("nav.html");
         });
     </script>
-    <p>Index</p>
+
+    <!-- Benvenuto -->
+	<section id="gioco" class='home'>
+		<div class="home-image">
+			<!-- <img src="Immagini/Ornn.jpg" style="filter: brightness(50%);"/>-->
+			<video autoplay muted loop id="ornn_login_screen">
+				<source src="assets/nunu_animation.mp4" type="video/mp4">
+			</video>
+			<div class="centered">
+				<div class="row">
+					<div class="col-12 off-white">
+						<h3 style="text-transform: uppercase;font-style: italic;">benvenuto nella landa</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 clash-gold lol-font">
+						<h1 class="display-1">League of Legends</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 
 </html>

@@ -1,0 +1,203 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/* Color Palette */
+.dark-blue {
+  color: #0e141b;
+}
+
+.light-blue {
+  color: #242731;
+}
+.clash-gold {
+  color: #ca9d4b;
+}
+.light-gold {
+  color: #f6c971;
+}
+.off-white {
+  color: #eee2cc;
+}
+
+/* Background Colors */
+.bg-dark-blue {
+  background-color: #0e141b;
+}
+.bg-clash-gold {
+  background-color: #ca9d4b;
+}
+.bg-flat-white {
+  background-color: #fefefe;
+}
+.bg-off-black {
+  background-color: #111111;
+}
+
+@font-face {
+  font-family: "Beaufort for LOL Regular";
+  src: url("assets/fonts/beaufortforlol-regular.ttf"), local("BeaufortforLOL-Regular");
+}
+
+.lol-font {
+  font-family: "Beaufort for LOL Regular";
+}
+
+@font-face {
+  font-family: "Beaufort for LOL Italic";
+  src: url("assets/fonts/beaufortforlol-italic.ttf"), local("BeaufortforLOL-Italic");
+}
+
+.lol-font-italic {
+  font-family: "Beaufort for LOL Italic";
+}
+
+.lol-title {
+  font-size: 72px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.div-title {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+@media only screen and (min-width: 320px) {
+  p {
+    font-size: calc(12px + 10 * ((100vw - 320px) / 2240));
+  }
+  h3 {
+    font-size: calc(12px + 14 * ((100vw - 320px) / 2240));
+  }
+  h5 {
+    font-size: calc(14px + 18 * ((100vw - 320px) / 2240));
+  }
+  h6 {
+    font-size: calc(6px + 14 * ((100vw - 320px) / 2240));
+  }
+  .display-1 {
+    font-size: calc(32px + 58 * ((100vw - 320px) / 2240));
+  }
+}
+
+.home-image video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+  overflow: hidden;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.home-image {
+  position: relative;
+  text-align: center;
+}
+
+.btn-header {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.outer-image {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.inner-image {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.yone-image {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+}
+
+nav li {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#campioni .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#campioni .card {
+  width: 15rem;
+  height: 22rem;
+  margin-bottom: 1rem;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#campioni .card:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+#campioni .card-body {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 84%;
+  left: 0;
+  color: #ca9d4b;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+#campioni .card-text {
+  color: white;
+}
+
+#campioni .card:hover .card-body {
+  top: 68%;
+}
+
+#yone .card {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 90%;
+}
+
+#forum a {
+  color: black;
+}
+
+#notifica div {
+  height: 20%;
+  background-image: url(Immagini/yone-art.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 45%;
+}
