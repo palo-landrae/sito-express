@@ -66,19 +66,40 @@
 					</div>
 				</div>
 			</div>
-			<!--
-			<div class="col-xl-3 col-lg-4 col-md-6">
-				<div class="card text-center">
-					<img src="Immagini/janna-card.jpg" class="card-img"/>
-					<div class="card-body">
-						<h5 class="card-title">Janna</h5>
-						<p class="card-text">la furia della tempesta</p>
-					</div>
-				</div>
-			</div>
-			-->
 		</div>
 	</section>
+
+
+	<script>
+		$(document).ready(function () {
+
+			// FETCHING DATA FROM JSON FILE
+			$.getJSON("https://my-json-server.typicode.com/palo-landrae/sito-express/campioni", 
+					function (data) {
+				var campione = '';
+				var count = 0;
+				// ITERATING THROUGH OBJECTS
+				$.each(data, function (key, value) {
+					//CONSTRUCTION OF ROWS HAVING
+					// DATA FROM JSON OBJECT
+					if (count == 0) {
+						campione += '<div class="row mx-4 lol-font">';
+					}
+					campione += '<div class="col-xl-3 col-lg-4 col-md-6"><div class="card text-center">';
+					campione += '<img src="' + value.image + '" class="card-img"/><div class="card-body">';
+					campione += '<h4 class="card-title">' + value.nome + '</h4><p class="card-text">' + value.descrizione + '</p></div></div></div>'
+					if (count == 4) {
+						campione += '</div>';
+						count = 0;
+					}
+					count += 1;
+				});
+				  
+				//INSERTING ROWS INTO DIV
+				$('#campioni').append(campione);
+			});
+		});
+	</script>
 </body>
 
 </html>
