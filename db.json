@@ -4,25 +4,25 @@
       "id": 1,
       "nome": "Akali",
       "descrizione": "L'assassina solitaria",
-      "image": "https://github.com/palo-landrae/sito-express/blob/master/assets/images/akali-card.jpg"
+      "image": "https://raw.githubusercontent.com/palo-landrae/sito-express/blob/master/assets/images/akali-card.jpg"
     },
     {
       "id": 2,
       "nome": "Garen",
       "descrizione": "La potenza di Demacia",
-      "image": "https://github.com/palo-landrae/sito-express/blob/master/assets/images/garen-card.jpg"
+      "image": "https://raw.githubusercontent.com/palo-landrae/sito-express/blob/master/assets/images/garen-card.jpg"
     },
     {
       "id": 3,
       "nome": "Ryze",
       "descrizione": "Il mago delle rune",
-      "image": "https://github.com/palo-landrae/sito-express/blob/master/assets/images/ryze-card.jpg"
+      "image": "https://raw.githubusercontent.com/palo-landrae/sito-express/master/assets/images/ryze-card.jpg"
     },
     {
       "id": 4,
       "nome": "Aphelios",
       "descrizione": "L'arma della fede",
-      "image": "https://github.com/palo-landrae/sito-express/blob/master/assets/images/aphelios-card.jpg"
+      "image": "https://raw.githubusercontent.com/palo-landrae/sito-express/blob/master/assets/images/aphelios-card.jpg"
     }
   ]
 }
