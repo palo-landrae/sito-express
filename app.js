@@ -11,8 +11,8 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html')); //__dirname : Ritorna la cartella del progetto
 });
 
-app.get('/about', function (req, res) {
-    res.sendFile(path.join(__dirname, 'about.html')); //__dirname : Ritorna la cartella del progetto
+app.get('/modalita', function (req, res) {
+    res.sendFile(path.join(__dirname, 'modalita.html')); //__dirname : Ritorna la cartella del progetto
 });
 
 app.get('/campioni', function (req, res) {
@@ -25,6 +25,10 @@ app.get('/nav.html', function (req, res) {
 
 app.get('/assets/nunu_animation.mp4', function (req, res) {
     res.sendFile(path.join(__dirname, 'assets/nunu_animation.mp4')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/assets/summoners_rift.mp4', function (req, res) {
+    res.sendFile(path.join(__dirname, 'assets/summoners_rift.mp4')); //__dirname : Ritorna la cartella del progetto
 });
 
 app.get('/assets/fonts/beaufortforlol-regular.ttf', function (req, res) {
@@ -49,6 +53,18 @@ app.get('/assets/images/garen-card.jpg', function (req, res) {
 
 app.get('/assets/images/ryze-card.jpg', function (req, res) {
     res.sendFile(path.join(__dirname, 'assets/images/ryze-card.jpg')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/assets/images/about/summoners_rift.jpg', function (req, res) {
+    res.sendFile(path.join(__dirname, 'assets/images/about/summoners_rift.jpg')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/assets/images/about/urf.png', function (req, res) {
+    res.sendFile(path.join(__dirname, 'assets/images/about/urf.png')); //__dirname : Ritorna la cartella del progetto
+});
+
+app.get('/assets/images/about/nexus_blitz.png', function (req, res) {
+    res.sendFile(path.join(__dirname, 'assets/images/about/nexus_blitz.png')); //__dirname : Ritorna la cartella del progetto
 });
 
 app.listen(5000, function () {
