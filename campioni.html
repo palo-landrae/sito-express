@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
 	<title>Campioni - League Express</title>
 	<base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-    <div id="nav-placeholder"></div>
-    <script>
-        $(function () {
-            $("#nav-placeholder").load("nav.html");
-        });
-    </script>
+	<div id="nav-placeholder"></div>
+	<script>
+		$(function () {
+			$("#nav-placeholder").load("nav.html");
+		});
+	</script>
 
-    <!-- Cards -->
+	<!-- Cards -->
 	<section id="campioni">
 		<div class="container my-3 pt-5 text-center">
 			<div class="row mb-5">
@@ -31,35 +31,37 @@
 		</div>
 	</section>
 
-
 	<script>
 		$(document).ready(function () {
 
 			// FETCHING DATA FROM JSON FILE
-			$.getJSON("https://my-json-server.typicode.com/palo-landrae/sito-express/campioni", 
-					function (data) {
-				var campione = '';
-				var count = 0;
-				// ITERATING THROUGH OBJECTS
-				$.each(data, function (key, value) {
-					//CONSTRUCTION OF ROWS HAVING
-					// DATA FROM JSON OBJECT
-					if (count == 0) {
-						campione += '<div class="row mx-4 lol-font">';
-					}
-					campione += '<div class="col-xl-3 col-lg-4 col-md-6"><div class="card text-center">';
-					campione += '<img src="' + value.image + '" class="card-img"/><div class="card-body">';
-					campione += '<h4 class="card-title">' + value.nome + '</h4><p class="card-text">' + value.descrizione + '</p></div></div></div>'
-					if (count == 4) {
-						campione += '</div>';
-						count = 0;
-					}
-					count += 1;
+			$.getJSON("https://my-json-server.typicode.com/palo-landrae/sito-express/campioni",
+				function (data) {
+					var campione = '';
+					var count = 0;
+					// ITERATING THROUGH OBJECTS
+					$.each(data, function (key, value) {
+						//CONSTRUCTION OF ROWS HAVING
+						// DATA FROM JSON OBJECT
+						console.log(count)
+						if (count == 0) {
+							campione += '<div class="row mx-4 lol-font">';
+						}
+						campione += '<div class="col-xl-3 col-lg-4 col-md-6"><div class="card text-center">';
+						campione += '<img src="' + value.image + '" class="card-img"/><div class="card-body">';
+						campione += '<h4 class="card-title">' + value.nome + '</h4><p class="card-text">' + value.descrizione + '</p></div></div></div>'
+						if (count == 3) {
+							campione += '</div>';
+							count = 0;
+						} else {
+							count += 1;
+						}
+
+					});
+
+					//INSERTING ROWS INTO DIV
+					$('#campioni').append(campione);
 				});
-				  
-				//INSERTING ROWS INTO DIV
-				$('#campioni').append(campione);
-			});
 		});
 	</script>
 </body>

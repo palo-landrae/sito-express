@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark my-0">
-    <div class="container-fluid">
+    <div class="container-fluid" id='myBar'>
         <a class="navbar-brand text-light" href="#">League Express</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,3 +20,29 @@
         </div>
     </div>
 </nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+<script>
+    if (window.location.href.includes('campioni')) {
+        btnDownload = '<button class="btn btn-primary btn-lg" id="btnjson" onclick="download()">Download JSON</a>'
+        $('#myBar').append(btnDownload);
+    }
+
+    function download() {
+        axios({
+            url: 'https://my-json-server.typicode.com/palo-landrae/sito-express/db',
+            method: 'GET',
+            responseType: 'blob'
+        })
+            .then((response) => {
+                const url = window.URL
+                    .createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = url;
+                link.setAttribute('download', 'campioni.json');
+                document.body.appendChild(link);
+                link.click();
+            })
+    }
+</script>
