@@ -39,22 +39,6 @@ app.get('/assets/fonts/beaufortforlol-italic.ttf', function (req, res) {
     res.sendFile(path.join(__dirname, 'assets/fonts/beaufortforlol-italic.ttf')); //__dirname : Ritorna la cartella del progetto
 });
 
-app.get('/assets/images/akali-card.jpg', function (req, res) {
-    res.sendFile(path.join(__dirname, 'assets/images/akali-card.jpg')); //__dirname : Ritorna la cartella del progetto
-});
-
-app.get('/assets/images/aphelios-card.jpg', function (req, res) {
-    res.sendFile(path.join(__dirname, 'assets/images/aphelios-card.jpg')); //__dirname : Ritorna la cartella del progetto
-});
-
-app.get('/assets/images/garen-card.jpg', function (req, res) {
-    res.sendFile(path.join(__dirname, 'assets/images/garen-card.jpg')); //__dirname : Ritorna la cartella del progetto
-});
-
-app.get('/assets/images/ryze-card.jpg', function (req, res) {
-    res.sendFile(path.join(__dirname, 'assets/images/ryze-card.jpg')); //__dirname : Ritorna la cartella del progetto
-});
-
 app.get('/assets/images/about/summoners_rift.jpg', function (req, res) {
     res.sendFile(path.join(__dirname, 'assets/images/about/summoners_rift.jpg')); //__dirname : Ritorna la cartella del progetto
 });

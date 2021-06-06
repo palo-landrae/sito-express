@@ -23,6 +23,12 @@
       "nome": "Aphelios",
       "descrizione": "L'arma della fede",
       "image": "https://raw.githubusercontent.com/palo-landrae/sito-express/master/assets/images/aphelios-card.jpg"
+    },
+    {
+        "id": 5,
+        "nome": "Janna",
+        "descrizione": "La furia della tempesta",
+        "image": "https://raw.githubusercontent.com/palo-landrae/sito-express/master/assets/images/janna-card.jpg"
     }
   ]
 }
