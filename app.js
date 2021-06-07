@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 const path = require('path');
+const port = process.env.PORT || 3000;
 
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
@@ -51,8 +52,8 @@ app.get('/assets/images/about/nexus_blitz.png', function (req, res) {
     res.sendFile(path.join(__dirname, 'assets/images/about/nexus_blitz.png')); //__dirname : Ritorna la cartella del progetto
 });
 
-app.listen(5000, function () {
-    console.log('Example app listening on port 5000!');
+app.listen(port, function () {
+    console.log('Example app listening on port 3000!');
 });
 
 
